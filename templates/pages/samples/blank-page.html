@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+<script>
+  $.ajax({
+    type : "POST",
+    url : '/index',
+    contentType: 'application/json;charset=UTF-8',
+    success: function (data) {
+      console.log(data);
+</script>
+
+{% block content %}
+
+{%endblock%}

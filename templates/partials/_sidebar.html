@@ -1,0 +1,53 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item nav-profile">
+      <a href="#" class="nav-link">
+        <div class="profile-image">
+          <img class="img-xs rounded-circle" src="static/images/faces/face8.jpg" alt="profile image">
+        </div>
+        <div class="text-wrapper">
+          <p class="profile-name">John Doe</p>
+          <p class="designation">Administrator</p>
+        </div>
+
+      </a>
+    </li> 
+    <li class="nav-item nav-category">
+      <span class="nav-link">Client End</span>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{url_for('index')}}">
+        <span class="menu-title">File a Report</span>
+        <i class="icon-note menu-icon"></i>
+      </a>
+    </li>
+    <li class="nav-item nav-category"><span class="nav-link">Administrator End</span></li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{url_for('mapsss')}}" %}>
+        <span class="menu-title"> Lucifer's Eye </span>
+        <i class="icon-map menu-icon"></i>
+      </a>
+    </li>
+
+<!--    <li class="nav-item">-->
+<!--      <a class="nav-link" href="{{url_for('insight')}}">-->
+<!--        <span class="menu-title"> Insights </span>-->
+<!--        <i class="icon-pie-chart menu-icon"></i>-->
+<!--      </a>-->
+<!--    </li>-->
+
+    <li class="nav-item nav-category"><span class="nav-link">Emergency Controls</span></li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{url_for('emergency')}}">
+        <span class="menu-title">Declare Emergency!</span>
+        <i class="icon-fire menu-icon"></i>
+      </a>
+
+    </li>
+    <li class="nav-item signOut">
+      <span class="nav-link">
+        <a class="btn btn-block px-0 btn-rounded btn-upgrade" href="" target="_blank"> <i class="icon-logout mx-2"></i> Sign Out</a>
+      </span>
+    </li>
+  </ul>
+</nav>

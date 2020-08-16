@@ -1,0 +1,118 @@
+{% extends 'base.html'%}
+{% block content %}
+  <div class="content-wrapper">
+    <div class="page-header">
+      <h3 class="page-title"> Insights </h3>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Administrator End</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Insights</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">The High Risk Regions</h4>
+            <p class="card-description"> predicted using past data
+            </p>
+            <div class="card-header">Decalare Emergency</div>
+            <div class="card-subtitle"> To be used in case of High Risk / Probability</div>
+            <button class="btn-danger btn btn-lg" onclick="sendSig()">Send out Emergency
+              Message</button>
+<script>
+  var e = {};
+</script>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body" style="overflow: hidden;flex-flow: column wrap">
+            <h4 class="card-title">Select Area of Focus</h4>
+            <p class="card-description"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+            </p>
+
+            <style>
+              #map { position:relative;height:  150%; top: 0; bottom: 0; width: 100%; overflow: hidden;
+              };
+              #info {
+                  display: block;
+                  position: relative;
+                  margin: 0px auto;
+                  width: 50%;
+                  padding: 10px;
+                  border: none;
+                  border-radius: 3px;
+                  font-size: 12px;
+                  text-align: center;
+                  color: #222;
+                  background: #fff;
+              };
+            </style>
+            <div id="map"></div>
+            <pre id="info"></pre>
+            <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+            <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+              mapboxgl.accessToken = 'pk.eyJ1IjoiZGVlcGFuc2h1Ymhhbm90IiwiYSI6ImNrZHdrNmtjYjBqc3MycW9hZWdydzEwM3UifQ.MMXnFBb9C7UckJRDUN4ZnA';
+              var map = new mapboxgl.Map({
+                  container: 'map', // container id
+                  style: 'mapbox://styles/mapbox/streets-v11',
+                  center: [140, -28], // starting position
+                  zoom: 3 // starting zoom
+              });
+              //JSON.stringify(e.lngLat.wrap())
+              map.on('click', function(e) {
+                  document.coords = e;
+                  document.getElementById('Volunteers').innerHTML =
+                          "Coordinates are: ("+e.lngLat.lat+","+e.lngLat.lng+")";
+
+                  });
+
+            </script>
+            <div style="margin-bottom: 20rem;">
+                <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Selected Area & Insights</h4>
+            <p class="card-description"> to assist those in need</p>
+            <div class="card-text" id="Volunteers"> </div>
+            table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th> Metric </th>
+                        <th> sajfl </th>
+                        <th> safs </th>
+                        <th> safsa </th>
+                      </tr>
+                    </thead>
+                  <tbody id="metric-table">
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    {{}}
+</script>
+
+
+{% endblock %}
